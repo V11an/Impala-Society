@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Alumni System - Alumni List</title>
+</head>
+<body>
+  <h2>Alumni List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Graduation Year</th>
+        <th>Email</th>
+        <th>Company</th>
+        <th>Position</th>
+        <th>LinkedIn</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for alumnus in alumni %}
+        <tr>
+          <td>{{ alumnus[0] }}</td>  <td>{{ alumnus[1] }}</td>  <td>{{ alumnus[2] }}</td>  <td>{{ alumnus[3] }}</td>  <td>{{ alumnus[4] }}</td>  <td><a href="{{ alumnus[5] }}">View Profile</a></td>  </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+
